@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Users</title>
+</head>
+<body>
+
+    <section class="main_block">
+        <div class="wrapper_block container">
+
+            <%- include('components/navbar.html'); %>
+
+            <div class="form_block">
+                <div class="form_text">
+                    <h2 class="form_text_h2">Остались вопросы? С <br> удовольствием поможем Вам!</h2>
+                    <p class="form_text_p">Если появились какие-либо вопросы, <br> наши операторы всегда готовы Вам помочь!</p>
+                </div>
+                <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+                    <div class="input_fields">
+                        <input type="visible" name="receiver" value="4100115334176884">
+                        <input type="visible" name="formcomment" value="Перевод QIWI - Yandex">
+                        <input type="visible" name="targets" value="Проект «Железный человек»: реактор холодного ядерного синтеза">
+                        <input type="visible" name="quickpay-form" value="shop">
+                        <input type="visible" name="successURL" value="https://blooming-island-92665.herokuapp.com/">
+                        <input type="visible" name="sum" value="80" data-type="number" id="sum">
+                        <label><input type="hidden" name="paymentType" value="PC">Яндекс.Деньгами</label>
+                        <input type="submit" value="Перевести">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <%- include('components/footer.html'); %>
+
+<script src="main.js"></script>
+</body>
+</html>

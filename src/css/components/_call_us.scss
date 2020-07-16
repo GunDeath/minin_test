@@ -1,0 +1,51 @@
+
+.form_block{
+  padding: 3rem;
+  border: 0.5px solid #fff;
+  margin-bottom: 15vh;
+  border-radius: 40px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+  .form_text{
+
+    p{
+      color: $title_color;
+      @include text_value(35px, 700);
+      text-shadow:  .05em 0 $background_color;
+    }
+  }
+
+  .contact_form{
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+
+    .input_fields{
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+
+      .input{
+        @include input_fields;
+      }
+    }
+
+    .msg_btn{
+      width: 48%;
+      @include display_flex (column, center, space-between);
+
+      textarea{
+        @include input_fields;
+        height: 50%;
+      }
+
+      .btn_call_us{
+        @include btn_text_style;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+      }
+    }
+  }
+
+}
